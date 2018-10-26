@@ -1,0 +1,21 @@
+<StackLayout class="container-nota">
+    <Label text="Peso da AD:" textWrap="true"></Label>
+
+    <FlexboxLayout horizontalAlignment="center" alignItems="center">
+        <Label class="legenda" text="Peso 2" textWrap="true"></Label>
+        <Switch checked="false" class="switch" (checkedChange)="mudaPesoAD($event)"></Switch>
+        <Label class="legenda" text="Peso 3" textWrap="true"></Label>
+    </FlexboxLayout>
+
+    <Label class="primeira-label" text="Nota da AD1" textWrap="true"></Label>
+    <TextField hint="Exemplo: 6.5" [(ngModel)]="calculadoraServico.notaAD1" keyboardType="number" maxLength=3 pattern="^\d{1,2}(\.\d{0,1})?$"></TextField>
+
+    <Label text="Nota da AP1" textWrap="true"></Label>
+    <TextField hint="Exemplo: 6.5" [(ngModel)]="calculadoraServico.notaAP1" keyboardType="number" maxLength=3 pattern="^\d{1,2}(\.\d{0,1})?$"></TextField>
+
+    <Label text="Nota da AD2" textWrap="true"></Label>
+    <TextField hint="Exemplo: 6.5" [(ngModel)]="calculadoraServico.notaAD2" keyboardType="number" maxLength=3 pattern="^\d{1,2}(\.\d{0,1})?$"></TextField>
+
+    <Button class="botao" text="Calcular" (tap)="validarNota()"></Button>
+    <Button class="botao" text="Limpar" (tap)="calculadoraServico.limparCampos()"></Button>
+</StackLayout>

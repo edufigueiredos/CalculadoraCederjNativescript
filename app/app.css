@@ -1,0 +1,9 @@
+ 
+@import "./nativescript-theme-core/css/sky.css";
+
+.botao {
+    background-color: #30bcff;
+    color: white;
+    width: 70%;
+    height: 13%;
+}
